@@ -6,6 +6,7 @@ header {
   height: 100vh;
   display: flex;
   align-items: center;
+  text-align: center;
 
   
 
@@ -13,6 +14,16 @@ header {
    margin: 0 auto;
    max-width: 80ch;
    background-color: #499da7;
+
+   .link-github {
+     padding: 1em;
+     color: white;
+     background-color: #006973;
+   }
+
+   p:nth-of-type(1) {
+     margin-bottom: 2em;
+   }
 
   }
 
@@ -35,6 +46,8 @@ h2 {
 a {
   color: #01454b;
 }
+
+
 
 }
 

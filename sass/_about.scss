@@ -3,8 +3,9 @@
     columns: 4em 3;
     list-style: none;
     gap: var(--gap);
-    margin: 0;
-    padding: 8px;
+    margin: 1rem 0 1.1rem;
+    padding: 0px;
+
     
 
 }
@@ -12,12 +13,18 @@
 #about li {
     border: 1px solid;
     align-self: start;
-    padding: .25em;
+    padding: .5em;
     border-radius: 8px;
     //margin: 0.60em;
     font-size: 0.8rem;
     overflow-wrap: break-word;
 }
+
+/* #about li:hover {
+    color: #ffffff;
+    //background-color: #000000;
+    background-color: #006973;
+} */
 
 
 #about section:nth-child(2) {

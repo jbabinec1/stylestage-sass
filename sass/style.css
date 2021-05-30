@@ -23,14 +23,19 @@
   --border-radius: 8px;
 }
 
-.container {
-  max-width: 103ch;
+article .container {
+  max-width: 90ch;
   margin: 0 auto;
   padding: 8px;
 }
 
 body {
   margin: 0;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 h1,
@@ -97,6 +102,7 @@ strong {
 a {
   text-decoration: none;
   color: var(--color-anchor);
+  cursor: pointer;
 }
 
 ::-moz-selection {
@@ -109,6 +115,12 @@ a {
   background: var(--color-darker);
 }
 
+@media only screen and (min-width: 681px) {
+  #about li {
+    font-size: 1rem !important;
+  }
+}
+
 header {
   background-color: #499da7;
   padding: 1px;
@@ -119,12 +131,23 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
 }
 
 header .container {
   margin: 0 auto;
   max-width: 80ch;
   background-color: #499da7;
+}
+
+header .container .link-github {
+  padding: 1em;
+  color: white;
+  background-color: #006973;
+}
+
+header .container p:nth-of-type(1) {
+  margin-bottom: 2em;
 }
 
 header h1 {
@@ -179,8 +202,8 @@ nav a:focus {
           columns: 4em 3;
   list-style: none;
   gap: var(--gap);
-  margin: 0;
-  padding: 8px;
+  margin: 1rem 0 1.1rem;
+  padding: 0px;
 }
 
 #about li {
@@ -188,16 +211,47 @@ nav a:focus {
   -ms-flex-item-align: start;
       -ms-grid-row-align: start;
       align-self: start;
-  padding: .25em;
+  padding: .5em;
   border-radius: 8px;
   font-size: 0.8rem;
   overflow-wrap: break-word;
 }
 
+/* #about li:hover {
+    color: #ffffff;
+    //background-color: #000000;
+    background-color: #006973;
+} */
 #about section:nth-child(2) p:nth-child(3) {
   color: #02484e;
   text-align: center;
   font-size: 1.4rem;
+}
+
+.profile {
+  width: 95vw;
+  max-width: 80ch;
+  margin: 1rem auto 10vh;
+}
+
+.profile .container {
+  text-align: center;
+}
+
+.profile ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+.profile li {
+  padding: 0.45em;
+}
+
+.profile a:nth-child(3) {
+  padding: .4em 0.75em;
+  border: 1px solid #499da7;
 }
 
 .link-github svg {
