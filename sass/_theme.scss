@@ -70,9 +70,9 @@ $font-sizes: (
   --border-radius: #{$border-radius};
 }
 
-.container {
+article .container {
 
-  max-width: 103ch;
+  max-width: 90ch;
   margin: 0 auto;
   padding: 8px;
 
@@ -80,4 +80,8 @@ $font-sizes: (
 
 body {
   margin: 0;
+}
+
+html {
+  box-sizing: border-box;
 }

@@ -23,14 +23,18 @@
   --border-radius: 8px;
 }
 
-.container {
-  max-width: 103ch;
+article .container {
+  max-width: 90ch;
   margin: 0 auto;
   padding: 8px;
 }
 
 body {
   margin: 0;
+}
+
+html {
+  box-sizing: border-box;
 }
 
 h1,
@@ -54,8 +58,6 @@ h2 {
 }
 
 #main h2 {
-  -ms-flex-item-align: center;
-  -ms-grid-row-align: center;
   align-self: center;
   color: #000000;
 }
@@ -81,11 +83,9 @@ article .container > ul:not(.features) > li + li,
 article .container > ol > li + li {
   margin-top: 1rem;
 }
-
 article .container * + h2 {
   margin-top: 4rem;
 }
-
 article .container * + h3 {
   margin-top: 2rem;
 }
@@ -97,11 +97,7 @@ strong {
 a {
   text-decoration: none;
   color: var(--color-anchor);
-}
-
-::-moz-selection {
-  color: #fff;
-  background: var(--color-darker);
+  cursor: pointer;
 }
 
 ::selection {
@@ -109,24 +105,36 @@ a {
   background: var(--color-darker);
 }
 
+@media only screen and (min-width: 681px) {
+  #about li {
+    font-size: 1rem !important;
+  }
+}
+main {
+  padding-bottom: 5vh;
+}
+
 header {
   background-color: #499da7;
   padding: 1px;
   height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
+  text-align: center;
 }
-
 header .container {
   margin: 0 auto;
   max-width: 80ch;
   background-color: #499da7;
 }
-
+header .container .link-github {
+  padding: 1em;
+  color: white;
+  background-color: #006973;
+}
+header .container p:nth-of-type(1) {
+  margin-bottom: 2em;
+}
 header h1 {
   color: var(--color-background);
   text-transform: uppercase;
@@ -134,11 +142,9 @@ header h1 {
   font-weight: bold;
   text-align: center;
 }
-
 header h2 {
   color: #01545c;
 }
-
 header a {
   color: #01454b;
 }
@@ -146,28 +152,20 @@ header a {
 nav {
   background-color: var(--color-darker);
   padding: 1em;
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
 }
-
 nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
   padding: 0;
-  -webkit-box-pack: space-evenly;
-  -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
   list-style: none;
 }
-
 nav a {
   color: #fff;
   text-decoration: none;
 }
-
 nav a:hover,
 nav a:focus {
   opacity: 0.7;
@@ -175,29 +173,78 @@ nav a:focus {
 
 #about ul {
   --gap: 1em;
-  -webkit-columns: 4em 3;
   columns: 4em 3;
   list-style: none;
   gap: var(--gap);
-  margin: 0;
-  padding: 8px;
+  margin: 1rem 0 1.1rem;
+  padding: 0px;
 }
 
 #about li {
   border: 1px solid;
-  -ms-flex-item-align: start;
-  -ms-grid-row-align: start;
   align-self: start;
-  padding: 0.25em;
+  padding: 0.5em;
   border-radius: 8px;
   font-size: 0.8rem;
   overflow-wrap: break-word;
 }
 
+/* #about li:hover {
+    color: #ffffff;
+    //background-color: #000000;
+    background-color: #006973;
+} */
 #about section:nth-child(2) p:nth-child(3) {
   color: #02484e;
   text-align: center;
   font-size: 1.4rem;
+}
+
+.profile {
+  width: 95vw;
+  max-width: 80ch;
+  margin: 1rem auto 10vh;
+}
+.profile .container {
+  text-align: center;
+}
+.profile ul {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.profile li {
+  padding: 0.45em;
+}
+.profile li span:nth-child(1) {
+  font-weight: bold;
+}
+.profile a:nth-child(3) {
+  padding: 0.4em 0.75em;
+  border: 1px solid #499da7;
+}
+
+footer#files {
+  text-align: center;
+}
+footer#files .container {
+  border: 4px dotted #006973;
+  max-width: 60ch;
+}
+footer#files .container a:not(:last-child) {
+  margin: 1px;
+  color: red;
+}
+footer#files .link-codepen {
+  display: block;
+  margin-top: 1em;
+}
+footer#files [class^=link]:not(.link-codepen) {
+  background-color: purple;
+  display: inline-flex;
+  min-height: 3em;
+  align-items: center;
 }
 
 .link-github svg {
@@ -206,7 +253,6 @@ nav a:focus {
 
 .skip-link:not(:focus):not(:active) {
   clip: rect(0 0 0 0);
-  -webkit-clip-path: inset(50%);
   clip-path: inset(50%);
   height: 1px;
   overflow: hidden;
@@ -214,5 +260,3 @@ nav a:focus {
   white-space: nowrap;
   width: 1px;
 }
-
-/*# sourceMappingURL=style.css.map */

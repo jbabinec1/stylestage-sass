@@ -1,0 +1,33 @@
+footer#files {
+    text-align: center;
+
+    .container {
+        border: 4px dotted #006973;
+        max-width: 60ch;
+
+       
+
+         a:not(:last-child) {
+            margin: 1px;
+            //padding: 1em;
+            color:red;
+        }
+
+       
+
+       
+    }
+
+    .link-codepen {
+        display: block;
+        margin-top: 1em;
+    }
+
+    [class^=link]:not(.link-codepen) {
+        
+        background-color: purple;
+        display: inline-flex;
+        min-height: 3em;
+        align-items: center;
+    }
+}
