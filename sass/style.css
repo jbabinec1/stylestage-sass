@@ -216,9 +216,9 @@ nav a:focus {
       -ms-grid-row-align: start;
       align-self: start;
   padding: .5em;
-  border-radius: 8px;
   font-size: 0.8rem;
   overflow-wrap: break-word;
+  color: #02484e;
 }
 
 /* #about li:hover {
@@ -232,14 +232,74 @@ nav a:focus {
   font-size: 1.4rem;
 }
 
+aside#styles {
+  text-align: center;
+  margin: 1em;
+  padding-top: 1px;
+  padding-bottom: 13px;
+}
+
+aside#styles h2 {
+  margin-bottom: 0;
+}
+
+aside#styles .features {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style: none;
+  margin-top: .2em;
+}
+
+aside#styles li {
+  padding: 13px;
+}
+
+aside#styles li span {
+  display: block;
+  margin-top: .8em;
+  color: #36454f;
+}
+
+aside#styles li a {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 8px;
+  border: 1px solid;
+}
+
+aside#styles .container .link-allstyles {
+  color: blue;
+}
+
+@media only screen and (max-width: 375px) {
+  aside#styles .features {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .profile {
   width: 95vw;
   max-width: 80ch;
-  margin: 1rem auto 10vh;
+  margin: 1rem auto 9vh;
 }
 
 .profile .container {
   text-align: center;
+}
+
+.profile .container h4#profile-title {
+  color: #02484e;
 }
 
 .profile ul {
@@ -258,15 +318,16 @@ nav a:focus {
 
 .profile li span:nth-child(1) {
   font-weight: bold;
+  color: #36454f;
 }
 
 .profile a:nth-child(3) {
-  padding: .4em 0.75em;
-  border: 1px solid #499da7;
+  color: blue;
 }
 
 footer#files {
   text-align: center;
+  margin: 1.1em;
 }
 
 footer#files .container {
@@ -276,23 +337,72 @@ footer#files .container {
 
 footer#files .container a:not(:last-child) {
   margin: 1px;
-  color: red;
+  color: #499da7;
+  border: 1px solid;
 }
 
 footer#files .link-codepen {
   display: block;
   margin-top: 1em;
+  color: blue;
 }
 
 footer#files [class^=link]:not(.link-codepen) {
-  background-color: purple;
+  background-color: #ffffff;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  min-height: 3em;
+  min-height: 2em;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 6px;
+}
+
+footer.page-footer {
+  padding: 3em 1em;
+  background-color: #006973;
+  color: #ffffff;
+}
+
+footer.page-footer .container {
+  width: 100%;
+  max-width: 80ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer.page-footer .container a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+footer.page-footer .container p {
+  text-align: center;
+}
+
+footer.page-footer .container p:first-child {
+  font-weight: bold;
+}
+
+footer.page-footer .container p:nth-last-child(1) {
+  color: var(--color-anchor);
+}
+
+footer.page-footer .container ul {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer.page-footer .container ul li {
+  padding: 2px;
+  margin-left: 12px;
 }
 
 .link-github svg {
