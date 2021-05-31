@@ -1,5 +1,6 @@
 footer#files {
     text-align: center;
+    margin: 1.1em;
 
     .container {
         border: 4px dotted #006973;
@@ -9,8 +10,9 @@ footer#files {
 
          a:not(:last-child) {
             margin: 1px;
-            //padding: 1em;
-            color:red;
+            color: #499da7;
+            border: 1px solid;
+            //border-radius: 8px;
         }
 
        
@@ -21,13 +23,66 @@ footer#files {
     .link-codepen {
         display: block;
         margin-top: 1em;
+        color: blue;
     }
 
     [class^=link]:not(.link-codepen) {
         
-        background-color: purple;
+        background-color: #ffffff;
         display: inline-flex;
-        min-height: 3em;
+        min-height: 2em;
         align-items: center;
+        padding: 6px;
+    }
+}
+
+
+footer.page-footer {
+    padding: 3em 1em;
+    background-color: #006973;
+    color: #ffffff;
+
+   
+    .container {
+        width: 100%;
+        max-width: 80ch;
+        margin-left: auto;
+        margin-right: auto;
+
+        a {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        p {
+            text-align:center;
+
+        }
+
+        p:first-child {
+            
+            font-weight: bold;
+        }
+
+        p:nth-last-child(1) {
+            color: var(--color-anchor);
+        }
+
+       
+
+        ul {
+
+            padding: 0;
+            display: flex;
+            list-style: none;
+            justify-content: center;
+
+            li {
+                padding: 2px;
+                margin-left: 12px;
+            }
+
+          
+        }
     }
 }
