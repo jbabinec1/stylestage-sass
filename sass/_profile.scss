@@ -2,11 +2,17 @@
 
     width: 95vw;
     max-width: 80ch;
-    margin: 1rem auto 10vh;
+    margin: 1rem auto 9vh;
 
 
     .container {
         text-align:center;
+
+        h4#profile-title {
+
+            color: #02484e
+
+        } 
     }
 
     ul {
@@ -21,12 +27,14 @@
 
         span:nth-child(1) {
             font-weight: bold;
+            color: #36454f;
         }
     }
 
     a:nth-child(3)  {
-        padding: .4em 0.75em;
-        border: 1px solid #499da7;
+        //padding: .4em 0.75em;
+        //border: 1px solid #499da7;
+        color: blue;
     }
 
 }
